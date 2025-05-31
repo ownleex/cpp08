@@ -6,7 +6,7 @@
 /*   By: ayarmaya <ayarmaya@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 21:09:19 by ayarmaya          #+#    #+#             */
-/*   Updated: 2025/05/30 21:27:17 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2025/05/31 04:17:57 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ typename T::iterator easyfind(T& container, int value)
     typename T::iterator it = std::find(container.begin(), container.end(), value);
     
     if (it == container.end())
-        throw std::runtime_error("Value not found in container");
+        throw std::runtime_error("Valeur non trouvée dans le container");
     
     return it;
 }
@@ -38,7 +38,7 @@ typename T::const_iterator easyfind(const T& container, int value)
     typename T::const_iterator it = std::find(container.begin(), container.end(), value);
     
     if (it == container.end())
-        throw std::runtime_error("Value not found in container");
+        throw std::runtime_error("Valeur non trouvée dans le container");
     
     return it;
 }
