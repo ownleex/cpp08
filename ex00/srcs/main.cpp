@@ -6,12 +6,67 @@
 /*   By: ayarmaya <ayarmaya@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 21:09:39 by ayarmaya          #+#    #+#             */
-/*   Updated: 2025/05/30 21:29:33 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2025/06/01 17:29:08 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "easyfind.hpp"
 
+int main()
+{
+    std::cout << std::endl << "=== Test fonction easyfind ===" << std::endl << std::endl;
+    
+    std::vector<int> vec;
+    vec.push_back(1);
+    vec.push_back(5);
+    vec.push_back(10);
+    vec.push_back(42);
+    vec.push_back(100);
+    
+    std::cout << "Le container contient: ";
+    for (std::vector<int>::iterator it = vec.begin(); it != vec.end(); it++)
+        std::cout << *it << " ";
+    std::cout << std::endl << std::endl;
+    
+    std::cout << "= Test reussi (valeur trouvée) =" << std::endl << std::endl;
+    try
+    {
+        std::vector<int>::iterator it = easyfind(vec, 42);
+        std::cout << "Valeur 42 trouvée à la position: " << std::distance(vec.begin(), it) << std::endl;
+    }
+    catch (const std::exception& e)
+    {
+        std::cout << "Erreur: " << e.what() << std::endl;
+    }
+    
+    // Test réussi - première occurrence
+    try
+    {
+        std::vector<int>::iterator it = easyfind(vec, 5);
+        std::cout << "Valeur 5 trouvée à la position: " << std::distance(vec.begin(), it) << std::endl;
+    }
+    catch (const std::exception& e)
+    {
+        std::cout << "Erreur: " << e.what() << std::endl;
+    }
+    std::cout << std::endl;
+    
+    // Test échec - valeur non trouvée
+    std::cout << "= Test echec (valeur non trouvée) =" << std::endl << std::endl;
+    try
+    {
+        std::vector<int>::iterator it = easyfind(vec, 999);
+        std::cout << "Valeur 999 trouvée à la position: " << std::distance(vec.begin(), it) << std::endl;
+    }
+    catch (const std::exception& e)
+    {
+        std::cout << "Erreur: " << e.what() << std::endl;
+    }
+    
+    std::cout << std::endl;
+}
+
+/*
 void testVector()
 {
     std::cout << "=== Test avec std::vector ===" << std::endl;
@@ -195,3 +250,4 @@ int main()
     
     return 0;
 }
+*/
