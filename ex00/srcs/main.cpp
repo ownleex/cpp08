@@ -6,7 +6,7 @@
 /*   By: ayarmaya <ayarmaya@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 21:09:39 by ayarmaya          #+#    #+#             */
-/*   Updated: 2025/06/01 18:18:48 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2025/06/01 22:37:19 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,15 +35,17 @@ int main()
         std::cout << "✅ Valeur 42 trouvée à la position: " << std::distance(vec.begin(), it) << " ✅" << std::endl;
     }
     catch (const std::exception& e) {
-        std::cout << "Erreur: " << e.what() << std::endl;
+        std::cerr << "❌ Erreur: " << e.what() << " ❌"<< std::endl;
     }
+    
+    std::cout << std::endl;
     
     try {
         std::vector<int>::iterator it = easyfind(vec, 5);
         std::cout << "✅ Valeur 5 trouvée à la position: " << std::distance(vec.begin(), it) << " ✅" << std::endl;
     }
     catch (const std::exception& e) {
-        std::cout << "Erreur: " << e.what() << std::endl;
+        std::cerr << "❌ Erreur: " << e.what() << " ❌"<< std::endl;
     }
     std::cout << std::endl << std::endl;
     
@@ -55,7 +57,7 @@ int main()
         std::cout << "✅ Valeur 999 trouvée à la position: " << std::distance(vec.begin(), it) << " ✅" << std::endl;
     }
     catch (const std::exception& e) {
-        std::cout << "❌ Erreur: " << e.what() << " ❌"<< std::endl;
+        std::cerr << "❌ Erreur: " << e.what() << " ❌"<< std::endl;
     }
     
     std::cout << std::endl << "=== Fin du test fonction easyfind ===" << std::endl << std::endl;
