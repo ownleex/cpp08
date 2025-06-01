@@ -6,7 +6,7 @@
 /*   By: ayarmaya <ayarmaya@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 21:09:39 by ayarmaya          #+#    #+#             */
-/*   Updated: 2025/06/01 17:30:29 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2025/06/01 17:54:55 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int main()
         std::cout << *it << " ";
     std::cout << std::endl << std::endl;
     
+    // Test reussi - valeur  trouvée
     std::cout << "= Test reussi (recherche valeur 42 et 5) =" << std::endl << std::endl;
     try
     {
@@ -39,7 +40,6 @@ int main()
         std::cout << "Erreur: " << e.what() << std::endl;
     }
     
-    // Test réussi - première occurrence
     try
     {
         std::vector<int>::iterator it = easyfind(vec, 5);
@@ -50,6 +50,7 @@ int main()
         std::cout << "Erreur: " << e.what() << std::endl;
     }
     std::cout << std::endl;
+    
     
     // Test échec - valeur non trouvée
     std::cout << "= Test echec (recherche valeur 999) =" << std::endl << std::endl;
