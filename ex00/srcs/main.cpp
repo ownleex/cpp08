@@ -6,7 +6,7 @@
 /*   By: ayarmaya <ayarmaya@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 21:09:39 by ayarmaya          #+#    #+#             */
-/*   Updated: 2025/06/01 17:54:55 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2025/06/01 18:10:17 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,14 @@ int main()
     std::cout << "Le container contient: ";
     for (std::vector<int>::iterator it = vec.begin(); it != vec.end(); it++)
         std::cout << *it << " ";
-    std::cout << std::endl << std::endl;
+    std::cout << std::endl << std::endl << std::endl;
     
     // Test reussi - valeur  trouvée
     std::cout << "= Test reussi (recherche valeur 42 et 5) =" << std::endl << std::endl;
     try
     {
         std::vector<int>::iterator it = easyfind(vec, 42);
-        std::cout << "Valeur 42 trouvée à la position: " << std::distance(vec.begin(), it) << std::endl;
+        std::cout << "✅  Valeur 42 trouvée à la position: " << std::distance(vec.begin(), it) << " ✅" << std::endl;
     }
     catch (const std::exception& e)
     {
@@ -43,13 +43,13 @@ int main()
     try
     {
         std::vector<int>::iterator it = easyfind(vec, 5);
-        std::cout << "Valeur 5 trouvée à la position: " << std::distance(vec.begin(), it) << std::endl;
+        std::cout << "✅  Valeur 5 trouvée à la position: " << std::distance(vec.begin(), it) << " ✅" << std::endl;
     }
     catch (const std::exception& e)
     {
         std::cout << "Erreur: " << e.what() << std::endl;
     }
-    std::cout << std::endl;
+    std::cout << std::endl << std::endl;
     
     
     // Test échec - valeur non trouvée
@@ -57,11 +57,11 @@ int main()
     try
     {
         std::vector<int>::iterator it = easyfind(vec, 999);
-        std::cout << "Valeur 999 trouvée à la position: " << std::distance(vec.begin(), it) << std::endl;
+        std::cout << "✅ Valeur 999 trouvée à la position: " << std::distance(vec.begin(), it) << " ✅" << std::endl;
     }
     catch (const std::exception& e)
     {
-        std::cout << "Erreur: " << e.what() << std::endl;
+        std::cout << "❌  Erreur: " << e.what() << " ❌"<< std::endl;
     }
     
     std::cout << std::endl << "=== Fin du test fonction easyfind ===" << std::endl << std::endl;
