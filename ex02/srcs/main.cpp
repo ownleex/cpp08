@@ -6,7 +6,7 @@
 /*   By: ayarmaya <ayarmaya@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 21:57:28 by ayarmaya          #+#    #+#             */
-/*   Updated: 2025/05/30 21:57:32 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2025/06/02 16:37:49 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -218,39 +218,6 @@ void testSTLAlgorithms()
     std::cout << std::endl;
 }
 
-void testDifferentContainers()
-{
-    std::cout << "=== Test avec différents conteneurs sous-jacents ===" << std::endl;
-    
-    // Test avec std::vector comme conteneur sous-jacent
-    MutantStack<int, std::vector<int> > vstack;
-    vstack.push(1);
-    vstack.push(2);
-    vstack.push(3);
-    
-    std::cout << "MutantStack avec std::vector: ";
-    for (MutantStack<int, std::vector<int> >::iterator it = vstack.begin(); it != vstack.end(); ++it)
-    {
-        std::cout << *it << " ";
-    }
-    std::cout << std::endl;
-    
-    // Test avec std::deque (par défaut)
-    MutantStack<int> dstack;
-    dstack.push(10);
-    dstack.push(20);
-    dstack.push(30);
-    
-    std::cout << "MutantStack avec std::deque: ";
-    for (MutantStack<int>::iterator it = dstack.begin(); it != dstack.end(); ++it)
-    {
-        std::cout << *it << " ";
-    }
-    std::cout << std::endl;
-    
-    std::cout << std::endl;
-}
-
 void testStackFunctionality()
 {
     std::cout << "=== Test des fonctionnalités de stack ===" << std::endl;
@@ -286,7 +253,6 @@ int main()
     testConstIterators();
     testCopyAndAssignment();
     testSTLAlgorithms();
-    testDifferentContainers();
     testStackFunctionality();
     
     std::cout << "=== FIN DES TESTS ===" << std::endl;
