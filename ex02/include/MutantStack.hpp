@@ -6,7 +6,7 @@
 /*   By: ayarmaya <ayarmaya@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 21:56:08 by ayarmaya          #+#    #+#             */
-/*   Updated: 2025/06/02 21:15:44 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2025/06/02 21:16:24 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,11 @@ template<typename T>
 class MutantStack : public std::stack<T>
 {
 public:
-
+    // Types d'itérateurs - on utilise ceux du conteneur sous-jacent via container_type
+    typedef typename std::stack<T>::container_type::iterator iterator;
+    typedef typename std::stack<T>::container_type::const_iterator const_iterator;
+    typedef typename std::stack<T>::container_type::reverse_iterator reverse_iterator;
+    typedef typename std::stack<T>::container_type::const_reverse_iterator const_reverse_iterator;
 
     // Constructeurs et destructeur (forme canonique)
     MutantStack();
