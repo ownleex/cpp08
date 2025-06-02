@@ -6,7 +6,7 @@
 /*   By: ayarmaya <ayarmaya@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 21:52:53 by ayarmaya          #+#    #+#             */
-/*   Updated: 2025/06/01 21:49:37 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2025/06/02 13:40:47 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,33 @@ int main()
         sp.addNumber(11);
         
         std::cout << "Valeurs ajoutées : 6 3 17 9 11" << std::endl;
+        std::cout << "Shortest span: " << sp.shortestSpan() << std::endl;
+        std::cout << "Longest span: " << sp.longestSpan() << std::endl;
+    }
+    
+    std::cout << "\n=== Test avec 20000 nombres ===" << std::endl;
+    {
+        Span sp(20000);
+        
+        // Remplir avec des nombres aléatoires
+        for (int i = 0; i < 20000; ++i) {
+            sp.addNumber(i * 5);
+        }
+        
+        std::cout << "Shortest span: " << sp.shortestSpan() << std::endl;
+        std::cout << "Longest span: " << sp.longestSpan() << std::endl;
+    }
+    
+    std::cout << "\n=== Test avec plage d'itérateurs ===" << std::endl;
+    {
+        std::vector<int> vec;
+        for (int i = 0; i < 100; ++i) {
+            vec.push_back(i * 5);
+        }
+        
+        Span sp(100);
+        sp.addNumbers(vec.begin(), vec.end());
+        
         std::cout << "Shortest span: " << sp.shortestSpan() << std::endl;
         std::cout << "Longest span: " << sp.longestSpan() << std::endl;
     }
@@ -62,34 +89,6 @@ int main()
         catch (std::exception& e) {
             std::cout << "Exception span plein: " << e.what() << std::endl;
         }
-    }
-    
-    std::cout << "\n=== Test avec 10000 nombres ===" << std::endl;
-    {
-        Span sp(20000);
-        std::srand(std::time(0));
-        
-        // Remplir avec des nombres aléatoires
-        for (int i = 0; i < 20000; ++i) {
-            sp.addNumber(std::rand() % 200000);
-        }
-        
-        std::cout << "Shortest span: " << sp.shortestSpan() << std::endl;
-        std::cout << "Longest span: " << sp.longestSpan() << std::endl;
-    }
-    
-    std::cout << "\n=== Test avec plage d'itérateurs ===" << std::endl;
-    {
-        std::vector<int> vec;
-        for (int i = 0; i < 100; ++i) {
-            vec.push_back(i * 5);
-        }
-        
-        Span sp(100);
-        sp.addNumbers(vec.begin(), vec.end());
-        
-        std::cout << "Shortest span: " << sp.shortestSpan() << std::endl;
-        std::cout << "Longest span: " << sp.longestSpan() << std::endl;
     }
     
     return 0;

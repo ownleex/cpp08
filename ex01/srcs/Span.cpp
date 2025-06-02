@@ -6,7 +6,7 @@
 /*   By: ayarmaya <ayarmaya@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 21:53:15 by ayarmaya          #+#    #+#             */
-/*   Updated: 2025/06/01 19:11:46 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2025/06/02 13:37:32 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ Span::~Span()
 void Span::addNumber(int number)
 {
     if (_numbers.size() >= _maxSize)
-        throw std::runtime_error("Span is full");
+        throw std::runtime_error("❌ Span est plein ❌");
     
     _numbers.push_back(number);
 }
@@ -46,7 +46,7 @@ void Span::addNumber(int number)
 int Span::shortestSpan()
 {
     if (_numbers.size() < 2)
-        throw std::runtime_error("Not enough numbers to find a span");
+        throw std::runtime_error("❌ pas assez de nombre ❌");
     
     // Copier et trier le vecteur
     std::vector<int> sorted = _numbers;
@@ -72,7 +72,7 @@ int Span::shortestSpan()
 int Span::longestSpan()
 {
     if (_numbers.size() < 2)
-        throw std::runtime_error("Not enough numbers to find a span");
+        throw std::runtime_error("❌ pas assez de nombre ❌");
     
     // Utiliser les algorithmes STL pour trouver min et max
     int min = *std::min_element(_numbers.begin(), _numbers.end());
