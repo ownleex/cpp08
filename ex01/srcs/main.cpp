@@ -6,7 +6,7 @@
 /*   By: ayarmaya <ayarmaya@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 21:52:53 by ayarmaya          #+#    #+#             */
-/*   Updated: 2025/06/02 13:40:47 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2025/06/02 18:50:03 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ int main()
             std::cout << sp.shortestSpan() << std::endl;
         }
         catch (std::exception& e) {
-            std::cout << "Exception 0 éléments: " << e.what() << std::endl;
+            std::cout << "Exception 0 élément: " << e.what() << std::endl;
         }
         
         // Test avec 1 élément
