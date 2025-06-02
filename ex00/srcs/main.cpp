@@ -6,7 +6,7 @@
 /*   By: ayarmaya <ayarmaya@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 21:09:39 by ayarmaya          #+#    #+#             */
-/*   Updated: 2025/06/01 22:37:19 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2025/06/03 00:28:25 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,10 @@ int main()
 }
 
 /*
+
+//#include <list>
+//#include <deque>
+
 void testVector()
 {
     std::cout << "=== Test avec std::vector ===" << std::endl;
