@@ -6,7 +6,7 @@
 /*   By: ayarmaya <ayarmaya@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 21:57:28 by ayarmaya          #+#    #+#             */
-/*   Updated: 2025/06/02 17:55:26 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2025/06/02 18:55:05 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,24 +57,24 @@ void testSubjectExampleWithList()
 {
     std::cout << "=== Test avec std::list (même logique) ===" << std::endl;
     
-    std::list<int> mstack;  // On garde le même nom pour montrer l'équivalence
+    std::list<int> list;
     
-    mstack.push_back(5);     // push() devient push_back()
-    mstack.push_back(17);
+    list.push_back(5);     // push() devient push_back()
+    list.push_back(17);
     
-    std::cout << mstack.back() << std::endl;  // top() devient back()
+    std::cout << list.back() << std::endl;  // top() devient back()
     
-    mstack.pop_back();       // pop() devient pop_back()
+    list.pop_back();       // pop() devient pop_back()
     
-    std::cout << mstack.size() << std::endl;
+    std::cout << list.size() << std::endl;
     
-    mstack.push_back(3);
-    mstack.push_back(5);
-    mstack.push_back(737);
-    mstack.push_back(0);
+    list.push_back(3);
+    list.push_back(5);
+    list.push_back(737);
+    list.push_back(0);
     
-    std::list<int>::iterator it = mstack.begin();
-    std::list<int>::iterator ite = mstack.end();
+    std::list<int>::iterator it = list.begin();
+    std::list<int>::iterator ite = list.end();
     
     ++it;
     --it;
@@ -84,7 +84,7 @@ void testSubjectExampleWithList()
         ++it;
     }
     
-    std::list<int> s(mstack);
+    std::list<int> s(list);
     
     std::cout << std::endl;
 }
@@ -93,24 +93,24 @@ void testSubjectExampleWithVector()
 {
     std::cout << "=== Test avec std::vector (même logique) ===" << std::endl;
     
-    std::vector<int> mstack;  // On garde le même nom pour montrer l'équivalence
+    std::vector<int> vector;
     
-    mstack.push_back(5);     // push() devient push_back()
-    mstack.push_back(17);
+    vector.push_back(5);     // push() devient push_back()
+    vector.push_back(17);
     
-    std::cout << mstack.back() << std::endl;  // top() devient back()
+    std::cout << vector.back() << std::endl;  // top() devient back()
     
-    mstack.pop_back();       // pop() devient pop_back()
+    vector.pop_back();       // pop() devient pop_back()
     
-    std::cout << mstack.size() << std::endl;
+    std::cout << vector.size() << std::endl;
     
-    mstack.push_back(3);
-    mstack.push_back(5);
-    mstack.push_back(737);
-    mstack.push_back(0);
+    vector.push_back(3);
+    vector.push_back(5);
+    vector.push_back(737);
+    vector.push_back(0);
     
-    std::vector<int>::iterator it = mstack.begin();
-    std::vector<int>::iterator ite = mstack.end();
+    std::vector<int>::iterator it = vector.begin();
+    std::vector<int>::iterator ite = vector.end();
     
     ++it;
     --it;
@@ -120,7 +120,7 @@ void testSubjectExampleWithVector()
         ++it;
     }
 
-    std::vector<int> s(mstack);
+    std::vector<int> s(vector);
     
     std::cout << std::endl;
 }
@@ -129,24 +129,24 @@ void testSubjectExampleWithDeque()
 {
     std::cout << "=== Test avec std::deque (même logique) ===" << std::endl;
     
-    std::deque<int> mstack;  // On garde le même nom pour montrer l'équivalence
+    std::deque<int> deque;
     
-    mstack.push_back(5);     // push() devient push_back()
-    mstack.push_back(17);
+    deque.push_back(5);     // push() devient push_back()
+    deque.push_back(17);
     
-    std::cout << mstack.back() << std::endl;  // top() devient back()
+    std::cout << deque.back() << std::endl;  // top() devient back()
     
-    mstack.pop_back();       // pop() devient pop_back()
+    deque.pop_back();       // pop() devient pop_back()
     
-    std::cout << mstack.size() << std::endl;
+    std::cout << deque.size() << std::endl;
     
-    mstack.push_back(3);
-    mstack.push_back(5);
-    mstack.push_back(737);
-    mstack.push_back(0);
+    deque.push_back(3);
+    deque.push_back(5);
+    deque.push_back(737);
+    deque.push_back(0);
     
-    std::deque<int>::iterator it = mstack.begin();
-    std::deque<int>::iterator ite = mstack.end();
+    std::deque<int>::iterator it = deque.begin();
+    std::deque<int>::iterator ite = deque.end();
     
     ++it;
     --it;
