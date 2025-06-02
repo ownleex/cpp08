@@ -6,7 +6,7 @@
 /*   By: ayarmaya <ayarmaya@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 21:53:15 by ayarmaya          #+#    #+#             */
-/*   Updated: 2025/06/02 13:37:32 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2025/06/03 01:39:23 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,15 @@ void Span::addNumber(int number)
         throw std::runtime_error("❌ Span est plein ❌");
     
     _numbers.push_back(number);
+}
+
+void Span::addNumbers(std::vector<int>::iterator begin, std::vector<int>::iterator end)
+{
+    while (begin != end)
+    {
+        addNumber(*begin);
+        ++begin;
+    }
 }
 
 int Span::shortestSpan()
@@ -79,13 +88,4 @@ int Span::longestSpan()
     int max = *std::max_element(_numbers.begin(), _numbers.end());
     
     return max - min;
-}
-
-void Span::addNumbers(std::vector<int>::iterator begin, std::vector<int>::iterator end)
-{
-    while (begin != end)
-    {
-        addNumber(*begin);
-        ++begin;
-    }
 }
