@@ -6,15 +6,13 @@
 /*   By: ayarmaya <ayarmaya@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 21:52:53 by ayarmaya          #+#    #+#             */
-/*   Updated: 2025/06/02 18:50:03 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2025/06/03 01:45:26 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
 #include <iostream>
 #include <vector>
-#include <cstdlib>
-#include <ctime>
 
 int main()
 {
