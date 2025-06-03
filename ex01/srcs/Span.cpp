@@ -6,7 +6,7 @@
 /*   By: ayarmaya <ayarmaya@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 21:53:15 by ayarmaya          #+#    #+#             */
-/*   Updated: 2025/06/03 01:46:36 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2025/06/04 00:23:17 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int Span::shortestSpan()
     std::vector<int> sorted = _numbers;
     std::sort(sorted.begin(), sorted.end());
     
-    // Trouver la plus petite différence entre deux nombres adjacents
+    // Trouver la plus petite différence entre deux nombres
     int minSpan = std::numeric_limits<int>::max();
     std::vector<int>::iterator it = sorted.begin();
     std::vector<int>::iterator next = it + 1;
