@@ -6,7 +6,7 @@
 /*   By: ayarmaya <ayarmaya@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 21:09:39 by ayarmaya          #+#    #+#             */
-/*   Updated: 2025/06/04 19:00:46 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2025/06/04 22:44:44 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ int main()
     lst.push_back(100);
     
     std::cout << "Le container contient: ";
-    for (std::list<int>::iterator it = lst.begin(); it != lst.end(); it++)
+    for (std::list<int>::iterator it = lst.begin(); it != lst.end(); ++it)
         std::cout << *it << " ";
     std::cout << std::endl << std::endl << std::endl;
     
