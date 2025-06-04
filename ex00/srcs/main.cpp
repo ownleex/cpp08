@@ -6,7 +6,7 @@
 /*   By: ayarmaya <ayarmaya@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 21:09:39 by ayarmaya          #+#    #+#             */
-/*   Updated: 2025/06/04 18:43:04 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2025/06/04 19:00:46 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int main()
     std::cout << "= Test reussi (recherche valeur 42 et 5) =" << std::endl << std::endl;
     try {
         std::vector<int>::iterator it = easyfind(vec, 42);
-        std::cout << "✅ Valeur 42 trouvée à la position: " << std::distance(vec.begin(), it) << " ✅" << std::endl;
+        std::cout << "✅ Valeur 42 trouvée à l'index : " << std::distance(vec.begin(), it) << " ✅" << std::endl;
     }
     catch (const std::exception& e) {
         std::cerr << "❌ Erreur: " << e.what() << " ❌"<< std::endl;
@@ -48,7 +48,7 @@ int main()
     
     try {
         std::vector<int>::iterator it = easyfind(vec, 5);
-        std::cout << "✅ Valeur 5 trouvée à la position: " << std::distance(vec.begin(), it) << " ✅" << std::endl;
+        std::cout << "✅ Valeur 5 trouvée à l'index : " << std::distance(vec.begin(), it) << " ✅" << std::endl;
     }
     catch (const std::exception& e) {
         std::cerr << "❌ Erreur: " << e.what() << " ❌"<< std::endl;
@@ -60,7 +60,7 @@ int main()
     std::cout << "= Test echec (recherche valeur 999) =" << std::endl << std::endl;
     try {
         std::vector<int>::iterator it = easyfind(vec, 999);
-        std::cout << "✅ Valeur 999 trouvée à la position: " << std::distance(vec.begin(), it) << " ✅" << std::endl;
+        std::cout << "✅ Valeur 999 trouvée à l'index : " << std::distance(vec.begin(), it) << " ✅" << std::endl;
     }
     catch (const std::exception& e) {
         std::cerr << "❌ Erreur: " << e.what() << " ❌"<< std::endl << std::endl;
@@ -86,7 +86,7 @@ int main()
     std::cout << "= Test reussi (recherche valeur 42 et 5) =" << std::endl << std::endl;
     try {
         std::list<int>::iterator it = easyfind(lst, 42);
-        std::cout << "✅ Valeur 42 trouvée à la position: " << std::distance(lst.begin(), it) << " ✅" << std::endl;
+        std::cout << "✅ Valeur 42 trouvée à l'index : " << std::distance(lst.begin(), it) << " ✅" << std::endl;
     }
     catch (const std::exception& e) {
         std::cerr << "❌ Erreur: " << e.what() << " ❌"<< std::endl;
@@ -96,7 +96,7 @@ int main()
     
     try {
         std::list<int>::iterator it = easyfind(lst, 5);
-        std::cout << "✅ Valeur 5 trouvée à la position: " << std::distance(lst.begin(), it) << " ✅" << std::endl;
+        std::cout << "✅ Valeur 5 trouvée à l'index : " << std::distance(lst.begin(), it) << " ✅" << std::endl;
     }
     catch (const std::exception& e) {
         std::cerr << "❌ Erreur: " << e.what() << " ❌"<< std::endl;
@@ -108,7 +108,7 @@ int main()
     std::cout << "= Test echec (recherche valeur 999) =" << std::endl << std::endl;
     try {
         std::list<int>::iterator it = easyfind(lst, 999);
-        std::cout << "✅ Valeur 999 trouvée à la position: " << std::distance(lst.begin(), it) << " ✅" << std::endl;
+        std::cout << "✅ Valeur 999 trouvée à l'index : " << std::distance(lst.begin(), it) << " ✅" << std::endl;
     }
     catch (const std::exception& e) {
         std::cerr << "❌ Erreur: " << e.what() << " ❌"<< std::endl << std::endl;
@@ -134,7 +134,7 @@ int main()
     std::cout << "= Test reussi (recherche valeur 42 et 5) =" << std::endl << std::endl;
     try {
         std::deque<int>::iterator it = easyfind(dq, 42);
-        std::cout << "✅ Valeur 42 trouvée à la position: " << std::distance(dq.begin(), it) << " ✅" << std::endl;
+        std::cout << "✅ Valeur 42 trouvée à l'index : " << std::distance(dq.begin(), it) << " ✅" << std::endl;
     }
     catch (const std::exception& e) {
         std::cerr << "❌ Erreur: " << e.what() << " ❌"<< std::endl;
@@ -144,7 +144,7 @@ int main()
     
     try {
         std::deque<int>::iterator it = easyfind(dq, 5);
-        std::cout << "✅ Valeur 5 trouvée à la position: " << std::distance(dq.begin(), it) << " ✅" << std::endl;
+        std::cout << "✅ Valeur 5 trouvée à l'index : " << std::distance(dq.begin(), it) << " ✅" << std::endl;
     }
     catch (const std::exception& e) {
         std::cerr << "❌ Erreur: " << e.what() << " ❌"<< std::endl;
@@ -156,7 +156,7 @@ int main()
     std::cout << "= Test echec (recherche valeur 999) =" << std::endl << std::endl;
     try {
         std::deque<int>::iterator it = easyfind(dq, 999);
-        std::cout << "✅ Valeur 999 trouvée à la position: " << std::distance(dq.begin(), it) << " ✅" << std::endl;
+        std::cout << "✅ Valeur 999 trouvée à l'index : " << std::distance(dq.begin(), it) << " ✅" << std::endl;
     }
     catch (const std::exception& e) {
         std::cerr << "❌ Erreur: " << e.what() << " ❌"<< std::endl;
