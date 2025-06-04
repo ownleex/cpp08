@@ -6,7 +6,7 @@
 /*   By: ayarmaya <ayarmaya@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 21:57:28 by ayarmaya          #+#    #+#             */
-/*   Updated: 2025/06/02 18:55:05 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2025/06/04 23:47:07 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <deque>
 #include <stack>
 
-void testSubjectExampleWithMutantStack()
+void testMutantStack()
 {
     std::cout << "=== Test avec MutantStack ===" << std::endl;
     
@@ -53,7 +53,7 @@ void testSubjectExampleWithMutantStack()
     std::cout << std::endl;
 }
 
-void testSubjectExampleWithList()
+void testList()
 {
     std::cout << "=== Test avec std::list (même logique) ===" << std::endl;
     
@@ -89,7 +89,7 @@ void testSubjectExampleWithList()
     std::cout << std::endl;
 }
 
-void testSubjectExampleWithVector()
+void testVector()
 {
     std::cout << "=== Test avec std::vector (même logique) ===" << std::endl;
     
@@ -125,7 +125,7 @@ void testSubjectExampleWithVector()
     std::cout << std::endl;
 }
 
-void testSubjectExampleWithDeque()
+void testDeque()
 {
     std::cout << "=== Test avec std::deque (même logique) ===" << std::endl;
     
@@ -164,12 +164,12 @@ int main()
     std::cout << std::endl << "=== DÉMONSTRATION DE L'ÉQUIVALENCE ===" << std::endl << std::endl;
     
     // Premier test avec MutantStack
-    testSubjectExampleWithMutantStack();
+    testMutantStack();
     
     // Tests avec différents conteneurs pour prouver l'équivalence
-    testSubjectExampleWithList();
-    testSubjectExampleWithVector();
-    testSubjectExampleWithDeque();
+    testList();
+    testVector();
+    testDeque();
     
     
     std::cout << "✅ === Tous les tests produisent des résultats identiques === ✅" << std::endl << std::endl;
