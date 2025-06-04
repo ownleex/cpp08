@@ -6,13 +6,15 @@
 /*   By: ayarmaya <ayarmaya@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 21:09:39 by ayarmaya          #+#    #+#             */
-/*   Updated: 2025/06/03 14:06:22 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2025/06/04 18:43:04 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "easyfind.hpp"
+#include <vector>
 #include <list>
 #include <deque>
+#include <iostream>
 
 int main()
 {
@@ -61,9 +63,11 @@ int main()
         std::cout << "✅ Valeur 999 trouvée à la position: " << std::distance(vec.begin(), it) << " ✅" << std::endl;
     }
     catch (const std::exception& e) {
-        std::cerr << "❌ Erreur: " << e.what() << " ❌"<< std::endl;
+        std::cerr << "❌ Erreur: " << e.what() << " ❌"<< std::endl << std::endl;
     }
     
+
+
     // Test avec list
     std::cout << std::endl << std::endl << "===== Test avec container list =====" << std::endl << std::endl;
     std::list<int> lst;
@@ -107,8 +111,10 @@ int main()
         std::cout << "✅ Valeur 999 trouvée à la position: " << std::distance(lst.begin(), it) << " ✅" << std::endl;
     }
     catch (const std::exception& e) {
-        std::cerr << "❌ Erreur: " << e.what() << " ❌"<< std::endl;
+        std::cerr << "❌ Erreur: " << e.what() << " ❌"<< std::endl << std::endl;
     }
+    
+
     
     // Test avec deque
     std::cout << std::endl << std::endl << "===== Test avec container deque =====" << std::endl << std::endl;
