@@ -6,7 +6,7 @@
 /*   By: ayarmaya <ayarmaya@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 21:57:28 by ayarmaya          #+#    #+#             */
-/*   Updated: 2025/06/05 01:11:37 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2025/06/05 01:19:32 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ void testList()
     
     std::list<int> s(list);
     
-    std::cout << std::endl << "✅ === List resultat identique MutantStack === ✅" << std::endl << std::endl;
+    std::cout << std::endl << "✅ === List resultat identique à MutantStack === ✅" << std::endl << std::endl;
 }
 
 void testVector()
@@ -123,7 +123,7 @@ void testVector()
 
     std::vector<int> s(vector);
     
-    std::cout << std::endl << "✅ === Vector resultat identique MutantStack === ✅" << std::endl << std::endl;
+    std::cout << std::endl << "✅ === Vector resultat identique à MutantStack === ✅" << std::endl << std::endl;
 }
 
 void testDeque()
@@ -156,7 +156,7 @@ void testDeque()
         std::cout << *it << std::endl;
         ++it;
     }
-    std::cout << std::endl << "✅ === Deque resultat identique MutantStack === ✅" << std::endl << std::endl;
+    std::cout << std::endl << "✅ === Deque resultat identique à MutantStack === ✅" << std::endl << std::endl;
 }
 
 void additionalTests()
