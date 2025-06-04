@@ -6,7 +6,7 @@
 /*   By: ayarmaya <ayarmaya@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 21:09:39 by ayarmaya          #+#    #+#             */
-/*   Updated: 2025/06/04 22:44:44 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2025/06/04 23:01:04 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int main()
     vec.push_back(100);
     
     std::cout << "Le container contient: ";
-    for (std::vector<int>::iterator it = vec.begin(); it != vec.end(); it++)
+    for (std::vector<int>::iterator it = vec.begin(); it != vec.end(); ++it)
         std::cout << *it << " ";
     std::cout << std::endl << std::endl << std::endl;
     
@@ -126,7 +126,7 @@ int main()
     dq.push_back(100);
     
     std::cout << "Le container contient: ";
-    for (std::deque<int>::iterator it = dq.begin(); it != dq.end(); it++)
+    for (std::deque<int>::iterator it = dq.begin(); it != dq.end(); ++it)
         std::cout << *it << " ";
     std::cout << std::endl << std::endl << std::endl;
     
