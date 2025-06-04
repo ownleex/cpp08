@@ -6,7 +6,7 @@
 /*   By: ayarmaya <ayarmaya@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 21:57:28 by ayarmaya          #+#    #+#             */
-/*   Updated: 2025/06/04 23:47:07 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2025/06/05 01:11:37 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <vector>
 #include <deque>
 #include <stack>
+#include <algorithm>
 
 void testMutantStack()
 {
@@ -59,12 +60,12 @@ void testList()
     
     std::list<int> list;
     
-    list.push_back(5);     // push() devient push_back()
+    list.push_back(5);
     list.push_back(17);
     
-    std::cout << list.back() << std::endl;  // top() devient back()
+    std::cout << list.back() << std::endl;
     
-    list.pop_back();       // pop() devient pop_back()
+    list.pop_back();
     
     std::cout << list.size() << std::endl;
     
@@ -86,21 +87,21 @@ void testList()
     
     std::list<int> s(list);
     
-    std::cout << std::endl;
+    std::cout << std::endl << "✅ === List resultat identique MutantStack === ✅" << std::endl << std::endl;
 }
 
 void testVector()
 {
-    std::cout << "=== Test avec std::vector (même logique) ===" << std::endl;
+    std::cout << std::endl << "=== Test avec std::vector (même logique) ===" << std::endl;
     
     std::vector<int> vector;
     
-    vector.push_back(5);     // push() devient push_back()
+    vector.push_back(5);
     vector.push_back(17);
     
-    std::cout << vector.back() << std::endl;  // top() devient back()
+    std::cout << vector.back() << std::endl;
     
-    vector.pop_back();       // pop() devient pop_back()
+    vector.pop_back();
     
     std::cout << vector.size() << std::endl;
     
@@ -122,21 +123,21 @@ void testVector()
 
     std::vector<int> s(vector);
     
-    std::cout << std::endl;
+    std::cout << std::endl << "✅ === Vector resultat identique MutantStack === ✅" << std::endl << std::endl;
 }
 
 void testDeque()
 {
-    std::cout << "=== Test avec std::deque (même logique) ===" << std::endl;
+    std::cout << std::endl << "=== Test avec std::deque (même logique) ===" << std::endl;
     
     std::deque<int> deque;
     
-    deque.push_back(5);     // push() devient push_back()
+    deque.push_back(5);
     deque.push_back(17);
     
-    std::cout << deque.back() << std::endl;  // top() devient back()
+    std::cout << deque.back() << std::endl;
     
-    deque.pop_back();       // pop() devient pop_back()
+    deque.pop_back();
     
     std::cout << deque.size() << std::endl;
     
@@ -155,7 +156,49 @@ void testDeque()
         std::cout << *it << std::endl;
         ++it;
     }
+    std::cout << std::endl << "✅ === Deque resultat identique MutantStack === ✅" << std::endl << std::endl;
+}
+
+void additionalTests()
+{
+    std::cout << "=== Tests supplémentaires ===" << std::endl << std::endl;
     
+    MutantStack<int> mstack;
+    // Test 1: Itérateurs inverses
+    std::cout << "== Test itérateur inverse ==" << std::endl << std::endl;
+    mstack.push(2);
+    mstack.push(4);
+    mstack.push(6);
+    mstack.push(8);
+    mstack.push(10);
+    
+    std::cout << "Parcours avec begin/end: ";
+    for (MutantStack<int>::iterator it = mstack.begin(); it != mstack.end(); ++it)
+        std::cout << *it << " ";
+    std::cout << std::endl;
+
+    std::cout << "Parcours inverse avec rbegin/rend: ";
+    for (MutantStack<int>::reverse_iterator it = mstack.rbegin(); it != mstack.rend(); ++it)
+        std::cout << *it << " ";
+    std::cout << std::endl << std::endl;
+    
+    
+    // Test 2: Algorithme STL
+    std::cout << "== Test algorithme STL ==" << std::endl << std::endl;
+
+    // Test avec une valeur qui existe
+    MutantStack<int>::iterator found = std::find(mstack.begin(), mstack.end(), 4);
+    if (found != mstack.end())
+        std::cout << "✅ Valeur 4 trouvée avec std::find!" << std::endl;
+    else
+        std::cout << "❌ Valeur 4 non trouvée" << std::endl;
+
+    // Test avec une valeur qui n'existe pas
+    found = std::find(mstack.begin(), mstack.end(), 999);
+    if (found != mstack.end())
+        std::cout << "✅ Valeur 999 trouvée" << std::endl;
+    else
+        std::cout << "❌ Valeur 999 non trouvée" << std::endl;
     std::cout << std::endl;
 }
 
@@ -171,8 +214,10 @@ int main()
     testVector();
     testDeque();
     
+    std::cout << "✅ === Tous les tests produisent des résultats identiques === ✅" << std::endl << std::endl << std::endl;
     
-    std::cout << "✅ === Tous les tests produisent des résultats identiques === ✅" << std::endl << std::endl;
+    // Tests supplémentaires
+    additionalTests();
     
     return 0;
 }

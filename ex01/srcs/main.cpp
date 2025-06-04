@@ -6,7 +6,7 @@
 /*   By: ayarmaya <ayarmaya@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 21:52:53 by ayarmaya          #+#    #+#             */
-/*   Updated: 2025/06/03 01:45:26 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2025/06/05 00:57:34 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int main()
     {
         std::vector<int> vec;
         for (int i = 0; i < 100; ++i) {
-            vec.push_back(i * 5);
+            vec.push_back(i * 5); // on remplit de 5 à 500
         }
         
         Span sp(100);
