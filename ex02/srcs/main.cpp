@@ -6,7 +6,7 @@
 /*   By: ayarmaya <ayarmaya@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 21:57:28 by ayarmaya          #+#    #+#             */
-/*   Updated: 2025/06/05 15:06:50 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2025/06/05 19:01:49 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -197,7 +197,7 @@ void additionalTests()
     // Test avec une valeur qui n'existe pas
     foundInt = std::find(mstack.begin(), mstack.end(), 999);
     if (foundInt != mstack.end())
-        std::cout << "✅ Valeur 999 trouvée à l'index : " << std::distance(mstack.begin(), foundInt) << "std::endl;
+        std::cout << "✅ Valeur 999 trouvée à l'index : " << std::distance(mstack.begin(), foundInt) << std::endl;
     else
         std::cout << "❌ Valeur 999 non trouvée" << std::endl;
     std::cout << std::endl;
