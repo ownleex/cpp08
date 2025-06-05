@@ -6,7 +6,7 @@
 /*   By: ayarmaya <ayarmaya@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 21:57:28 by ayarmaya          #+#    #+#             */
-/*   Updated: 2025/06/05 01:19:32 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2025/06/05 01:55:59 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <vector>
 #include <deque>
 #include <stack>
+#include <string>
 #include <algorithm>
 
 void testMutantStack()
@@ -165,7 +166,7 @@ void additionalTests()
     
     MutantStack<int> mstack;
     // Test 1: Itérateurs inverses
-    std::cout << "== Test itérateur inverse ==" << std::endl << std::endl;
+    std::cout << "== Test itérateurs ==" << std::endl << std::endl;
     mstack.push(2);
     mstack.push(4);
     mstack.push(6);
@@ -183,22 +184,63 @@ void additionalTests()
     std::cout << std::endl << std::endl;
     
     
-    // Test 2: Algorithme STL
+    // Test : Algorithme STL
     std::cout << "== Test algorithme STL ==" << std::endl << std::endl;
 
     // Test avec une valeur qui existe
-    MutantStack<int>::iterator found = std::find(mstack.begin(), mstack.end(), 4);
-    if (found != mstack.end())
+    MutantStack<int>::iterator foundInt = std::find(mstack.begin(), mstack.end(), 4);
+    if (foundInt != mstack.end())
         std::cout << "✅ Valeur 4 trouvée avec std::find!" << std::endl;
     else
         std::cout << "❌ Valeur 4 non trouvée" << std::endl;
 
     // Test avec une valeur qui n'existe pas
-    found = std::find(mstack.begin(), mstack.end(), 999);
-    if (found != mstack.end())
+    foundInt = std::find(mstack.begin(), mstack.end(), 999);
+    if (foundInt != mstack.end())
         std::cout << "✅ Valeur 999 trouvée" << std::endl;
     else
         std::cout << "❌ Valeur 999 non trouvée" << std::endl;
+    std::cout << std::endl;
+
+    
+    
+    // Test : Test avec des strings
+    std::cout << "== Test avec des strings ==" << std::endl << std::endl;
+    
+    MutantStack<std::string> stringStack;
+    stringStack.push("cette");
+    stringStack.push("phrase");
+    stringStack.push("contient");
+    stringStack.push("cinq");
+    stringStack.push("mots");
+    
+    std::cout << "== Test itérateurs ==" << std::endl << std::endl;
+    std::cout << "Parcours avec begin/end: " << std::endl;
+    for (MutantStack<std::string>::iterator it = stringStack.begin(); it != stringStack.end(); ++it)
+        std::cout << *it << " ";
+    std::cout << std::endl << std::endl;
+
+    std::cout << "Parcours inverse avec rbegin/rend: " << std::endl;
+    for (MutantStack<std::string>::reverse_iterator it = stringStack.rbegin(); it != stringStack.rend(); ++it)
+        std::cout << *it << " ";
+    std::cout << std::endl << std::endl;
+
+    // Test : Algorithme STL
+    std::cout << "== Test algorithme STL ==" << std::endl << std::endl;
+
+    // Test avec une valeur qui existe
+    MutantStack<std::string>::iterator foundString = std::find(stringStack.begin(), stringStack.end(), "contient");
+    if (foundString != stringStack.end())
+        std::cout << "✅ Valeur - contient - trouvée avec std::find!" << std::endl;
+    else
+        std::cout << "❌ Valeur - contient - non trouvée" << std::endl;
+
+    // Test avec une valeur qui n'existe pas
+    foundString = std::find(stringStack.begin(), stringStack.end(), "inexistant");
+    if (foundString != stringStack.end())
+        std::cout << "✅ Valeur - inexistant - trouvée" << std::endl;
+    else
+        std::cout << "❌ Valeur - inexistant - non trouvée" << std::endl;
     std::cout << std::endl;
 }
 
