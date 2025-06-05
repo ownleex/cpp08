@@ -6,7 +6,7 @@
 /*   By: ayarmaya <ayarmaya@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 21:57:28 by ayarmaya          #+#    #+#             */
-/*   Updated: 2025/06/05 01:55:59 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2025/06/05 15:06:50 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -190,14 +190,14 @@ void additionalTests()
     // Test avec une valeur qui existe
     MutantStack<int>::iterator foundInt = std::find(mstack.begin(), mstack.end(), 4);
     if (foundInt != mstack.end())
-        std::cout << "✅ Valeur 4 trouvée avec std::find!" << std::endl;
+        std::cout << "✅ Valeur 4 trouvée à l'index : " << std::distance(mstack.begin(), foundInt) << std::endl;
     else
         std::cout << "❌ Valeur 4 non trouvée" << std::endl;
 
     // Test avec une valeur qui n'existe pas
     foundInt = std::find(mstack.begin(), mstack.end(), 999);
     if (foundInt != mstack.end())
-        std::cout << "✅ Valeur 999 trouvée" << std::endl;
+        std::cout << "✅ Valeur 999 trouvée à l'index : " << std::distance(mstack.begin(), foundInt) << "std::endl;
     else
         std::cout << "❌ Valeur 999 non trouvée" << std::endl;
     std::cout << std::endl;
@@ -231,14 +231,14 @@ void additionalTests()
     // Test avec une valeur qui existe
     MutantStack<std::string>::iterator foundString = std::find(stringStack.begin(), stringStack.end(), "contient");
     if (foundString != stringStack.end())
-        std::cout << "✅ Valeur - contient - trouvée avec std::find!" << std::endl;
+        std::cout << "✅ Valeur - contient - trouvée à l'index : " << std::distance(stringStack.begin(), foundString) << std::endl;
     else
         std::cout << "❌ Valeur - contient - non trouvée" << std::endl;
 
     // Test avec une valeur qui n'existe pas
     foundString = std::find(stringStack.begin(), stringStack.end(), "inexistant");
     if (foundString != stringStack.end())
-        std::cout << "✅ Valeur - inexistant - trouvée" << std::endl;
+        std::cout << "✅ Valeur - inexistant - trouvée à l'index : " << std::distance(stringStack.begin(), foundString) << std::endl;
     else
         std::cout << "❌ Valeur - inexistant - non trouvée" << std::endl;
     std::cout << std::endl;
