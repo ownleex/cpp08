@@ -6,7 +6,7 @@
 /*   By: ayarmaya <ayarmaya@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 21:53:15 by ayarmaya          #+#    #+#             */
-/*   Updated: 2025/06/04 00:23:17 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2025/06/06 00:44:47 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void Span::addNumbers(std::vector<int>::iterator begin, std::vector<int>::iterat
 
 int Span::shortestSpan()
 {
-    if (_numbers.size() < 2)
+    if (_numbers.size() <= 1)
         throw std::runtime_error("❌ pas assez de nombre ❌");
     
     // Copier et trier le vecteur
@@ -80,7 +80,7 @@ int Span::shortestSpan()
 
 int Span::longestSpan()
 {
-    if (_numbers.size() < 2)
+    if (_numbers.size() <= 1)
         throw std::runtime_error("❌ pas assez de nombre ❌");
     
     // Utiliser les algorithmes STL pour trouver min et max
