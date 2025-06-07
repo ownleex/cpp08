@@ -6,7 +6,7 @@
 /*   By: ayarmaya <ayarmaya@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 21:57:28 by ayarmaya          #+#    #+#             */
-/*   Updated: 2025/06/05 19:01:49 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2025/06/07 02:03:26 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -157,6 +157,9 @@ void testDeque()
         std::cout << *it << std::endl;
         ++it;
     }
+
+    std::deque<int> s(deque);
+
     std::cout << std::endl << "✅ === Deque resultat identique à MutantStack === ✅" << std::endl << std::endl;
 }
 
